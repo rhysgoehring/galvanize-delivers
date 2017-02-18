@@ -19,3 +19,9 @@ p {
 #marketing {
   margin: 25px 0px;
 }
+
+.iLabel{
+  position: relative;
+  top: 3px;
+  margin-right: 2px;
+}
