@@ -2,36 +2,44 @@
 <html>
 
 <head>
-    <title>Order Delivery</title>
+    <title>Galvanize Delivers</title>
+    <link href= "http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Gloria+Hallelujah|Lobster" rel="stylesheet">
+    <link type= "text/css" rel= "stylesheet" href= "css/materialize.min.css" media="screen,projection" />
+    <link type= "text/css" rel= "stylesheet" href= "css/main.css"/>
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
     <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
     <script src="js/materialize.js"></script>
     <script src="js/app.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <header class="navbar-fixed">
-        <nav class="nav-wrapper blue darken-2">
-            <a class="brand-logo" href="index.html">Galvanize Delivers</a>
-            <ul class="right">
-                <li><a href="order.html">Order Delivery</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class= "navbar-fixed">
+    <nav class= "nav-wrapper blue darken-3">
+        <img class="circle" id="logo" src = "img/galvanize-g.svg" href="index.html" />
+        <a class= "brand-logo orange-text text-darken" href="index.html">Galvanize Delivers</a>
+        <ul class = "right hide-on-med-and-down blue darken-4">
+          <li><a class="orange-text text-darken-3" href= "order.html">Order Delivery</a></li>
+        </ul>
+   <!-- FIX THIS -->
+        <!-- <ul class="side-nav">
+          <li><a href="">Order Delivery</a></li>
+        </ul> -->
+
+    </nav>
+  </header>
     <main>
         <div class="container">
             <div class="row">
                 <div class="col s12 l7">
-                    <h4>Menu</h4>
+                    <h4 class="orange-text text-darken-3">Menu</h4>
                     <div class="row">
                         <div class="col s12 m12 l6">
-                            <div class="card">
+                            <div class="card orange-text text-darken-3">
                                 <div class="card-image">
                                     <img src="img/burger.jpg" />
                                 </div>
@@ -40,12 +48,12 @@
                                     <p class="price">$8.99</p>
                                 </div>
                                 <div class="card-action">
-                                    <a class= "add" href="#">Add to order</a>
+                                    <a class= "add orange-text text-darken" href="#">Add to order</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col s12 m12 l6">
-                            <div class="card">
+                            <div class="card orange-text text-darken-3">
                                 <div class="card-image">
                                     <img src="img/pizza.jpg" />
                                 </div>
@@ -54,14 +62,14 @@
                                     <p class="price">$11.99</p>
                                 </div>
                                 <div class="card-action">
-                                    <a class="add" href="#">Add to order</a>
+                                    <a class="add orange-text text-darken" href="#">Add to order</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 m12 l6">
-                            <div class="card">
+                            <div class="card orange-text text-darken-3">
                                 <div class="card-image">
                                     <img src="img/ribs.jpg" />
                                 </div>
@@ -70,12 +78,12 @@
                                     <p class="price">$14.99</p>
                                 </div>
                                 <div class="card-action">
-                                    <a class="add" href="#">Add to order</a>
+                                    <a class="add orange-text text-darken" href="#">Add to order</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col s12 m12 l6">
-                            <div class="card">
+                            <div class="card orange-text text-darken-3">
                                 <div class="card-image">
                                     <img src="img/ice_cream.jpg" />
                                 </div>
@@ -84,22 +92,23 @@
                                     <p class="price">$7.99</p>
                                 </div>
                                 <div class="card-action">
-                                    <a class="add" href="#">Add to order</a>
+                                    <a class="add orange-text text-darken" href="#">Add to order</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 l5">
-                    <h4>Order</h4>
+                <div class="col s12 l5 orange-text text-darken-3">
+                    <h4 class="orange-text text-darken-3">Order</h4>
                     <table class="striped">
                         <thead>
                             <tr>
-                                <th>Item</th>
-                                <th class="right-align">Price</th>
+                                <th class = "orange-text text-darken-3">Item</th>
+                                <th class="orange-text text-darken-3
+                                right-align">Price</th>
                             </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody id="body"></tbody>
                         <tfoot>
                             <tr>
                                 <td class="right-align">Subtotal</td>
@@ -126,7 +135,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">phone</i>
-                                <input id="phoneNum" type="text">
+                                <input id="phoneNum" type="tel">
                                 <label for="phoneNum">Phone number</label>
                             </div>
                         </div>
@@ -139,7 +148,7 @@
                         </div>
                         <div class="row">
                             <div class="col s12 center">
-                                <a class="btn-large pink accent-2" id= "orderBtn">Place Order</a>
+                                <a class="btn btn-large orange darken-3" id= "orderBtn">Place Order</a>
                             </div>
                         </div>
                     </form>
@@ -148,26 +157,26 @@
         </div>
     </main>
 </body>
-<footer class="page-footer blue darken-2">
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m8">
-                <h5 class="white-text">Galvanize Delivers</h5>
-                <p class="white-text">Fine Dining, Delivered.</p>
-            </div>
-            <div class="col s12 m4">
-                <ul class=>
-                    <li><a class="white-text" href="index.html">Home</a></li>
-                    <li><a class="white-text" href="order.html">Order Delivery</a></li>
-                </ul>
-            </div>
-        </div>
+<footer class= "page-footer blue darken-3">
+  <div class= "container">
+    <div class= "row">
+      <div class = "col s12 m8">
+        <h5 class= "orange-text text-darken-3">Galvanize Delivers</h5>
+        <p class= "orange-text text-darken-3">Fine Dining, Delivered.</p>
+      </div>
+      <div class = "col s12 m4">
+        <ul>
+          <li><a class= "orange-text text-darken-3" href= "index.html">Home</a></li>
+          <li><a class= "orange-text text-darken-3" href= "order.html">Order Delivery</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-copyright blue darken-3">
-        <div class="container white-text">
-            © 2016 Galvanize Delivers
-        </div>
+  </div>
+  <div class= "footer-copyright blue darken-4">
+    <div class= "container orange-text text-darken-4">
+    © 2016 Galvanize Delivers
     </div>
+  </div>
 
 </footer>
 

@@ -1,6 +1,7 @@
 $(document).ready(function(){
   let cards = $('.card');
   let realSubTotal = 0;
+  let totalCell = $('#tot')
   // console.log(cards);
   // let reciept = $($('tbody')[0]);
   // let total = $('#total');
@@ -42,35 +43,28 @@ $(document).ready(function(){
     totalCell.append('$' + totalValue);
 
     console.log("total value is ", totalValue)
+  })
 
+  $('#orderBtn').on('click', function(){
+    let $name = $('#name');
+    let $phoneNumber = $('#phoneNum');
+    let $address = $('#address');
+    if ($name.val().trim() === "") {
+      Materialize.toast('Please enter your name.', 5000);
+      return;
+    }
+    if ($phoneNumber.val().trim() === "") {
+      Materialize.toast('Please enter your phone number.', 5000);
+      return;
+    }
+    if ($address.val().trim() === "") {
+      Materialize.toast('Please enter your address.', 5000);
+      return;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // newRow.append('<td>'+ item.text() +'</td>');
-    // neweRow.append('<td class="right">'+ price +'</td>');
-
-
-
-
-
+    Materialize.toast("Order Placed, Thank You!", 5000);
+    $('#body').empty();
 
 
   })
-
-
 });
